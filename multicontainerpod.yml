@@ -2,8 +2,9 @@ kind: Pod
 apiVersion: v1
 metadata:
  name: multicontainer
+ namespace: default
  labels: # any key and value pair
-  author: sonal
+  author: rafi
   type: webserver
   env: dev
 spec:
