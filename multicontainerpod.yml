@@ -1,15 +1,16 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
- name: multicontainer
- namespace: default
- labels: # any key and value pair
-  author: rafi
-  type: webserver
-  env: dev
+  name: multicontainer
+  namespace: default
+  labels:
+    author: rafi
+    type: webserver
+    env: dev
 spec:
- containers:
-  - name: c1
-    image: nginx
-  - name: c2
-    image: tomcat
+  containers:
+    - name: c1
+      image: nginx
+    - name: c2
+      image: tomcat
+
