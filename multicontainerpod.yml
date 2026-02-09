@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: multicontainer
+ labels: # any key and value pair
+  author: sonal
+  type: webserver
+  env: dev
+spec:
+ containers:
+  - name: c1
+    image: nginx
+  - name: c2
+    image: tomcat
