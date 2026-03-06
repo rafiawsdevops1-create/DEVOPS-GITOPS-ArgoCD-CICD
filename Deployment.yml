@@ -7,7 +7,7 @@ spec:
   replicas: 4
   minReadySeconds: 10 # wait for 45 sec before going to deploy next pod
   strategy:
-    type: RollingUpdate
+    type: RollingUpdates
     rollingUpdate:
       maxUnavailable: 1  
       maxSurge: 1        # max number of pods to run for the deployment
