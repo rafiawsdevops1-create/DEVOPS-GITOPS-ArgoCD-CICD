@@ -44,5 +44,3 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.imageName }}:${{ github.run_number }}
-
-    
