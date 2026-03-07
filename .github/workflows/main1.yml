@@ -39,9 +39,12 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Convert image name to lowercase
+        run: echo "IMAGE_NAME=$(echo ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.imageName }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.imageName }}:${{ github.run_number }}
+          tags: ${{ env.IMAGE_NAME }}:${{ github.run_number }}
