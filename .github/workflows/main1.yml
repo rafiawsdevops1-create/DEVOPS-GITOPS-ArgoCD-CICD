@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      imageName: argocddemo1
+      imageName: argocddemoLatest
 
     permissions:
       contents: write
