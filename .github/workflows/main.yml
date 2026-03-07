@@ -1,10 +1,10 @@
 
 name: CICD with ArgoCD
-on: workflow_dispatch
+on: push
 jobs:
  cicd:
   env:
-   imageName: "argocddemo"
+   imageName: "argocddemo1"
   runs-on: ubuntu-latest
   steps:
    - name: Checkout the repo 
